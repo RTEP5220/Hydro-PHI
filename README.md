@@ -76,6 +76,6 @@ cd build && ./Hydro-PHI_tests
 
 
 <p align="center">
-**HydroPHI φ**<br/>⚡ Genuinely Real-Time · 🔒 Lock-Free ·<br/>
-HydroPHI φ · Raspberry Pi 5 · C++17 · Team_3 Real-Time Embedded Programming . UOG
+**HydroPHI φ**<br/>⚡ Genuinely Real-Time · 🔒 Lock-Free · Raspberry Pi 5 · C++17<br/>
+HydroPHI φ · Team_3 Real-Time Embedded Programming . University of Glasgow
 </p>
