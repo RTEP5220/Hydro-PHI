@@ -58,13 +58,12 @@ cd build && ./Hydro-PHI_tests
 ```bash
 cd build && ./Hydro-PHI_tests
 ```
-
 ---
 
 ## 📄 License
 
 [MIT License](LICENSE) — Copyright © 2026 HydroPHAI
-<img src="images/HydroPHI.png" width="300" align="right" alt="HYDRO-PHI Project">
+
 ---
 
 <p align="center">
@@ -73,3 +72,8 @@ HydroPHAI φ · Raspberry Pi 5 · C++17 ·
 </p>
 
 ---
+
+<p align="left">
+<img src="images/HydroPHI.png" width="200" align="right" alt="HYDRO-PHI Project"> </br>
+</p>
+
