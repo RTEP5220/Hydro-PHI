@@ -64,9 +64,9 @@ cd build && ./Hydro-PHI_tests
 ## 📱 Connect with Us
 
 <p align="left">
-<a href="https://www.instagram.com/hydro_phi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />Follow our Instgram ! </a></br>
+<a href="https://www.instagram.com/hydro_phi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />Follow our Instgram Page ! </a></br>
 
-<a href="https://www.youtube.com/@hydrophi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="youtube" height="30" width="40" />Subscribe our Youtube Page.</a>
+<a href="https://www.youtube.com/@hydrophi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="youtube" height="30" width="40" />Subscribe to our Youtube Channel.</a>
 </p>
 
 
