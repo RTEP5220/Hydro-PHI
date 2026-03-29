@@ -60,11 +60,6 @@ cd build && ./Hydro-PHI_tests
 
 ---
 
-<p align="center">
-**HydroPHAI φ**<br/>⚡ Genuinely Real-Time · 🔒 Lock-Free ·<br/>
-HydroPHAI φ · Raspberry Pi 5 · C++17 · Team_3 Real-Time Embedded Programming . UOG
-</p>
-
 
 ## 📱 Connect with Us
 
@@ -79,3 +74,8 @@ HydroPHAI φ · Raspberry Pi 5 · C++17 · Team_3 Real-Time Embedded Programming
 <img src="images/HydroPHI.png" width="200" align="right" alt="HYDRO-PHI Project"> </br>
 </p>
 
+
+<p align="center">
+**HydroPHAI φ**<br/>⚡ Genuinely Real-Time · 🔒 Lock-Free ·<br/>
+HydroPHAI φ · Raspberry Pi 5 · C++17 · Team_3 Real-Time Embedded Programming . UOG
+</p>
