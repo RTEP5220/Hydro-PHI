@@ -64,7 +64,7 @@ cd build && ./Hydro-PHI_tests
 ## 📄 License
 
 [MIT License](LICENSE) — Copyright © 2026 HydroPHAI
-
+<img src="images/HydroPHI.png" width="300" align="right" alt="HYDRO-PHI Project">
 ---
 
 <p align="center">
