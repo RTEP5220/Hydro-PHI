@@ -42,15 +42,9 @@ make -j4
 ### Run
 
 ```bash
-# Must run as root for SCHED_FIFO, mlockall, and GPIO access
+# Recommended GPIO Config Coming Later.
 sudo ./Hydro-PHI
 ```
-### Tests (no hardware required)
-
-```bash
-cd build && ./Hydro-PHI_tests
-```
-
 ---
 
 ## 🧪 Tests
@@ -68,7 +62,7 @@ cd build && ./Hydro-PHI_tests
 
 <p align="center">
 **HydroPHAI φ**<br/>⚡ Genuinely Real-Time · 🔒 Lock-Free ·<br/>
-HydroPHAI φ · Raspberry Pi 5 · C++17 ·
+HydroPHAI φ · Raspberry Pi 5 · C++17 · Team_3 Real-Time Embedded Programming . UOG
 </p>
 
 ---
