@@ -8,7 +8,7 @@
 ![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi%205-red.svg)
 ![Language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)
 ![OS](https://img.shields.io/badge/OS-Linux%20Raspberry%20Pi%20OS-green.svg)
-![Name](https://img.shields.io/badge/name-HydroPHAI%20%CF%86-0F6E56.svg)
+![Name](https://img.shields.io/badge/name-HydroPHI%20%CF%86-0F6E56.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
 ---
