@@ -1,4 +1,4 @@
-# HydroPHAI φ 💧⚡
+# HydroPHI φ 💧⚡
 
 > **HydroPHI** — *Hydro* (Greek: liquid/water) · *φ* (phi: fluid dynamics flow rate symbol)
 >
