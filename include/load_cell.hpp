@@ -7,10 +7,6 @@
 
 // ─────────────────────────────────────────────────────────────────────────────
 // LoadCell — HX711 24-bit ADC via lgpio bit-bang, dedicated thread
-//
-// HX711 bit-banging is inherently slow (24 clock pulses + settling time).
-// Runs on its own SCHED_FIFO thread so it NEVER blocks the controller.
-// Atomically publishes weight + stability flag for controller consumption.
 // ─────────────────────────────────────────────────────────────────────────────
 class LoadCell {
 public:
