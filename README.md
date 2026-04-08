@@ -22,8 +22,6 @@
 
 ## 🧾 Bill of Materials
 
-All prices sourced from Amazon UK (cheapest available listing). Quantities: 1 unit each.
-
 ### Controller
 
 | Component | Qty | Cost (£) |
