@@ -14,7 +14,13 @@
 ---
 ## 📋 Table of Contents
 
+## 📋 Table of Contents
+
 - [Bill of Materials](#-bill-of-materials)
+- [Getting Started](#-getting-started)
+- [Tests](#-tests)
+- [License](#-license)
+- [Connect with Us](#-connect-with-us)
   
 ## Overview
 
