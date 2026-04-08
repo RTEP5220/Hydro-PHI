@@ -12,6 +12,13 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
 ---
+
+## Overview
+
+**HydroPHI** *(φ — phi, fluid dynamics flow rate symbol)* is a fully autonomous adaptive filling system for Raspberry Pi 5. Place any container — bottle, mug, jug, shot glass — and the system detects it, profiles its geometry, and fills it precisely with zero operator input.
+
+---
+
 ## 📋 Agenda
 
 - [Bill of Materials](#-bill-of-materials)
@@ -20,28 +27,18 @@
 - [License](#-license)
 - [Connect with Us](#-connect-with-us)
 
-## 🧾 Bill of Materials
+---
 
-### Controller
+## 🧾 Bill of Materials
 
 | Component | Qty |
 |---|---|
 | Raspberry Pi 5 | 1 |
-
-### Sensors & ADC
-
-| Component | Qty |
-|---|---|
 | VL53L1X ToF Laser Sensor module | 1 |
 | VL53L1X Breakout Board (VL53L1X-SATEL) | 1 |
 | HX711 Load Cell ADC breakout module | 1 |
 | 5kg Load Cell (strain gauge, 4-wire) | 1 |
 | IR Proximity Sensor (digital output) | 1 |
-
-### Actuator & Fluid Components
-
-| Component | Qty |
-|---|---|
 | Peristaltic Pump 12V DC | 1 |
 | 5V Relay Module (single channel) | 1 |
 | Silicone Tubing 6mm ID × 1m | 1 |
@@ -49,13 +46,6 @@
 
 ---
   
-## Overview
-
-**HydroPHI** *(φ — phi, fluid dynamics flow rate symbol)* is a fully autonomous adaptive filling system for Raspberry Pi 5. Place any container — bottle, mug, jug, shot glass — and the system detects it, profiles its geometry, and fills it precisely with zero operator input.
-
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
