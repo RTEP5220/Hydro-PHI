@@ -12,15 +12,46 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
 ---
-## 📋 Table of Contents
-
-## 📋 Table of Contents
+## 📋 Agenda
 
 - [Bill of Materials](#-bill-of-materials)
 - [Getting Started](#-getting-started)
 - [Tests](#-tests)
 - [License](#-license)
 - [Connect with Us](#-connect-with-us)
+
+## 🧾 Bill of Materials
+
+All prices sourced from Amazon UK (cheapest available listing). Quantities: 1 unit each.
+
+### Controller
+
+| Component | Qty | Cost (£) |
+|---|---|---|---|
+| Raspberry Pi 5 | 1 | 58.98 |
+
+### Sensors & ADC
+
+| Component | Qty | Cost (£) |
+|---|---|---|---|
+| VL53L1X ToF Laser Sensor module | 1 | 6.49 | 
+| VL53L1X Breakout Board (VL53L1X-SATEL) | 1 | 9.75 |
+| HX711 Load Cell ADC breakout module | 1 | 3.49 |
+| 5kg Load Cell (strain gauge, 4-wire) | 1 | 5.99 |
+| IR Proximity Sensor (digital output) | 1 | 1.99 |
+
+### Actuator & Fluid Components
+
+| Component | Qty | Cost (£) |
+|---|---|---|---|
+| Peristaltic Pump 12V DC | 1 | 12.99 |
+| 5V Relay Module (single channel) | 1 | 1.49 |
+| Silicone Tubing 6mm ID × 1m | 1 | 3.99 |
+| Dispensing Nozzle 6mm | 1 | 2.49 |
+
+**Estimated Grand Total: ~£115.64**
+
+---
   
 ## Overview
 
