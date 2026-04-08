@@ -11,13 +11,11 @@
 ![Name](https://img.shields.io/badge/name-HydroPHI%20%CF%86-0F6E56.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
----
 
 ## Overview
 
 **HydroPHI** *(φ — phi, fluid dynamics flow rate symbol)* is a fully autonomous adaptive filling system for Raspberry Pi 5. Place any container — bottle, mug, jug, shot glass — and the system detects it, profiles its geometry, and fills it precisely with zero operator input.
 
----
 
 ## 📋 Agenda
 
@@ -26,8 +24,6 @@
 - [Tests](#-tests)
 - [License](#-license)
 - [Connect with Us](#-connect-with-us)
-
----
 
 ## 🧾 Bill of Materials
 
@@ -44,8 +40,6 @@
 | Silicone Tubing 6mm ID × 1m | 1 |
 | Dispensing Nozzle 6mm | 1 |
 
----
-  
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -83,8 +77,6 @@ cd build && ./Hydro-PHI_tests
 ## 📄 License
 
 [MIT License](LICENSE) — Copyright © 2026 HydroPHI
-
----
 
 
 ## 📱 Connect with Us
