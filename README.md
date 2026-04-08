@@ -24,30 +24,29 @@
 
 ### Controller
 
-| Component | Qty | Cost (£) |
-|---|---|---|
-| Raspberry Pi 5 | 1 | 58.98 |
+| Component | Qty |
+|---|---|
+| Raspberry Pi 5 | 1 |
 
 ### Sensors & ADC
 
-| Component | Qty | Cost (£) |
-|---|---|---|
-| VL53L1X ToF Laser Sensor module | 1 | 6.49 |
-| VL53L1X Breakout Board (VL53L1X-SATEL) | 1 | 9.75 |
-| HX711 Load Cell ADC breakout module | 1 | 3.49 |
-| 5kg Load Cell (strain gauge, 4-wire) | 1 | 5.99 |
-| IR Proximity Sensor (digital output) | 1 | 1.99 |
+| Component | Qty |
+|---|---|
+| VL53L1X ToF Laser Sensor module | 1 |
+| VL53L1X Breakout Board (VL53L1X-SATEL) | 1 |
+| HX711 Load Cell ADC breakout module | 1 |
+| 5kg Load Cell (strain gauge, 4-wire) | 1 |
+| IR Proximity Sensor (digital output) | 1 |
 
 ### Actuator & Fluid Components
 
-| Component | Qty | Cost (£) |
-|---|---|---|
-| Peristaltic Pump 12V DC | 1 | 12.99 |
-| 5V Relay Module (single channel) | 1 | 1.49 |
-| Silicone Tubing 6mm ID × 1m | 1 | 3.99 |
-| Dispensing Nozzle 6mm | 1 | 2.49 |
+| Component | Qty |
+|---|---|
+| Peristaltic Pump 12V DC | 1 |
+| 5V Relay Module (single channel) | 1 |
+| Silicone Tubing 6mm ID × 1m | 1 |
+| Dispensing Nozzle 6mm | 1 |
 
-**Estimated Grand Total: ~£115.64**
 ---
   
 ## Overview
