@@ -1,4 +1,4 @@
-# HydroPHI φ 💧⚡
+# HydroPHI φ 💧
 
 > **HydroPHI** — *Hydro* (Greek: liquid/water) · *φ* (phi: fluid dynamics flow rate symbol)
 >
@@ -12,8 +12,11 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 
 ---
+## 📋 Table of Contents
 
-## 📌 Overview
+- [Bill of Materials](#-bill-of-materials)
+  
+## Overview
 
 **HydroPHI** *(φ — phi, fluid dynamics flow rate symbol)* is a fully autonomous adaptive filling system for Raspberry Pi 5. Place any container — bottle, mug, jug, shot glass — and the system detects it, profiles its geometry, and fills it precisely with zero operator input.
 
