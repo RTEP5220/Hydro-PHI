@@ -36,7 +36,7 @@ bool LoadCell::isHX711Ready() const {
 }
 
 long LoadCell::readRaw() {
-    // ── Wait for DOUT LOW (conversion complete) ───────────────────────────
+    // ── Wait for DOUT LOW (conversion complete) ──
     // Timeout after 100ms — HX711 conversion rate is 10–80 Hz
     int retries = 500;
     while (!isHX711Ready() && retries-- > 0) {
@@ -50,13 +50,9 @@ long LoadCell::readRaw() {
     long value = 0;
 
     // ── Clock in 24 bits MSB first ────────────────────────────────────────
-    // HX711 datasheet (Rev 1.0) timing requirements:
     //   t1 (PD_SCK HIGH time):  min 200ns, typical 1µs
     //   t2 (PD_SCK LOW time):   min 200ns, typical 1µs
     //   t3 (DOUT valid after PD_SCK falling edge): max 100ns
-    //
-    // v6 fix: explicit 300ns delays guarantee compliance on any load.
-    // v5 had no delays — the bit-bang could violate timing under CPU load.
     for (int i = 0; i < 24; ++i) {
         lgGpioWrite(gpio_handle_, cfg_.clock_pin, 1);
         ThreadUtils::nsDelay(300);    // Hold SCK HIGH ≥ 200ns
