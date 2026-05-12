@@ -45,6 +45,18 @@
 
 ---
 
+## 📐 UML Sequence Diagram
+
+This section outlines the planned UML sequence diagram for the HydroPHI automatic water filling system. The diagram shows the steps taken by the system after a user places a bottle on the platform.
+
+The process begins when the user places a bottle, triggering the IR proximity sensor. The IR sensor signals the Pi controller, which boots the time-of-flight sensor and requests an initial depth measurement to compute the empty volume of the bottle. The Pi then opens the pump and enters a measurement loop: it continuously polls the ToF sensor for the current water level and compares it against the fill target.
+
+When the water level reaches the target, the Pi closes the pump and signals the user that the bottle is filled.
+
+![HydroPHI UML Sequence Diagram](images/hydrophi_uml.png)
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
