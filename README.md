@@ -68,14 +68,7 @@ make -j4
 
 ```bash
 # Recommended GPIO Config Coming Later.
-sudo ./Hydro-PHI
-```
----
-
-## 🧪 Tests
-
-```bash
-cd build && ./Hydro-PHI_tests
+sudo ./build/hphi
 ```
 ---
 
