@@ -74,8 +74,6 @@ if (!lc.init()) {
 }
 std::cout << "[LoadCell] Ready\n";
 
-
-
     // Initialize the IR sensor on GPIO pin 16, active low configuration.
     IRSensor ir(16, gpio_handle, false);
     if (!ir.init([](bool present) {
@@ -96,6 +94,7 @@ std::cout << "[LoadCell] Ready\n";
     signal(SIGINT, sigHandler);
 
     // Defining Initial State, rim and target fill.
+    // float to cm conversion is handled inside the ToF class.
     State state = State::IDLE;
     float rim    = 0.0f;
     float target = 0.0f;
@@ -125,49 +124,54 @@ lc.startThread();
 
 while (running) {
     
-        bool present = container_present.load(std::memory_order_acquire);
         // Sate IDLE //  
         switch(state) {
             case State::IDLE:
             relay.off();
-            if (present) {
+            if (container_present.load(std::memory_order_acquire)) {
             std::cout << "IDLE: Container detected - Scanning Process ... \n";
             state = State::SCANNING;
             }else {
+            relay.off();
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
             }break;
 
             // In the SCANNING state, 
             // we take a baseline measurement to find the rim level of the container.
             case State::SCANNING: {
-            if (!present) {
+            if (!container_present.load(std::memory_order_acquire)) {
+            
             std::cout << "SCANNING: Container removed - Back to IDLE\n";
             state = State::IDLE;
             break;
             }
             std::cout << "SCANNING: Measuring Container Rim...\n";
             tof.stopThread();
-            float r = tof.baseline(3, container_present);
+            // Take 3 Samples 3 Samples to ensure stable reading. 
+            float r = tof.baseline(3, container_present); //r is the media distance from ToF
+            // to the container rim.
+            
             tof.startThread();
 
-            if (r < 0 || !container_present.load()) {
+            if (r < 0 || !container_present.load(std::memory_order_acquire)) {
             std::cout << "SCANNING: Aborted - Container Removed\n";
             state = State::IDLE;
             break;
             }
-            // 
-        float drop = base - r;
-        std::cout << "SCANNING: Rim=" << r << "cm  drop=" << drop << "cm\n";
+            // The drop is the distance needed to fill the container.
+            // Drop is equal to the difference between the baseline (platform) and the rim level.
+            float drop = base - r;
+            std::cout << "SCANNING: Rim=" << r << "cm  drop=" << drop << "cm\n";
 
-        if (drop < 2.0f) {
-        std::cout << "SCANNING: Drop too small — retrying\n";
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-        break;
-        }
+            if (drop < 2.0f) {
+            std::cout << "SCANNING: Height of Container too Small — Retrying\n";
+            std::this_thread::sleep_for(std::chrono::milliseconds(50));
+            break;
+             }
         // Storing Rim and Filling Target Calculations (in Percentage).
         rim    = r;
-        target = rim - (drop * 0.90f); // Target = 90% of Container. - Leaving 10% Safety Margin.
-        std::cout << "SCANNING: Target = " << target << " cm\n";
+        target = rim - (drop * 0.90f); // Target (Target Filling) = 90% of Container. - Leaving 10% Safety Margin.
+        std::cout << "SCANNING: Filling Target = " << target << " cm\n";
         relay.on();
         std::cout << "SCANNING: Pump ON - Filling Process ... \n";
         state = State::FILLING;
@@ -177,20 +181,27 @@ while (running) {
         // we continuously monitor the distance until we reach the target level 
         // Or the container is removed.          
             case State::FILLING: {
-            if (!present) {
+            if (!container_present.load(std::memory_order_acquire)) {
             relay.off();
-            std::cout << "FILLING: Container Removed — Pump OFF\n";
+            std::cout <<"FILLING: Container Removed — Pump OFF\n";
             state = State::IDLE;
             break;
             }
 
             float d = tof.getLatest(); // Get the Latest distance -Sync- Reading from ToF.
           
+        if (!container_present.load(std::memory_order_acquire)) {
+        relay.off();
+        std::cout << "FILLING: Container removed — pump OFF\n";
+        state = State::IDLE;
+        break;
+            }
                 if (d < 0) {
-                std::this_thread::sleep_for(std::chrono::milliseconds(50));
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
                 break;
                }
              std::cout << "Filling " << d << "cm  Target=" << target << "cm\n";
+             
              if (d < rim && d <= target) {
                 relay.off();
                 std::cout << "FILLING: Fill Complete - Pump OFF\n";
@@ -198,7 +209,14 @@ while (running) {
                 break;
                 }
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        if (!container_present.load(std::memory_order_acquire)) {
+        relay.off();
+        std::cout << "FILLING: Container removed — pump OFF\n";
+        state = State::IDLE;
+        break;
+    }
+
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
                 break;
                 }
 
@@ -208,11 +226,11 @@ while (running) {
 
                 case State::DONE:
                 relay.off();
-                if (!present) {
+                if (!container_present.load(std::memory_order_acquire)) {
                 std::cout << "DONE: Container Removed - Ready for Next ... \n\n";
                 state = State::IDLE;
                 } else {
-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
                 }
                 break;
                 // default:
