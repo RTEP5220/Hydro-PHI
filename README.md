@@ -19,6 +19,15 @@
 
 ---
 
+This GitHub repository showcases a real-time embedded systems project focused on developing 
+an autonomous adaptive filling system. The system detects any container placed on the station, 
+profiles its geometry using a time-of-flight laser sensor, and fills it precisely to the rim — 
+with zero operator input, regardless of container size or shape.
+
+![HydroPHI Model](images/Model.jpg)
+
+---
+
 ## 📋 Agenda
 
 - [Bill of Materials](#-bill-of-materials)
