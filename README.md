@@ -24,7 +24,7 @@ an autonomous adaptive filling system. The system detects any container placed o
 profiles its geometry using a time-of-flight laser sensor, and fills it precisely to the rim — 
 with zero operator input, regardless of container size or shape.
 
-![HydroPHI Model](images/Model.jpg)
+![HydroPHI Model](images/Model.png)
 
 ---
 
