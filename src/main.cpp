@@ -170,7 +170,7 @@ while (running) {
              }
         // Storing Rim and Filling Target Calculations (in Percentage).
         rim    = r;
-        target = rim - (drop * 0.90f); // Target (Target Filling) = 90% of Container. - Leaving 10% Safety Margin.
+        target = (drop * 0.90f); // Target (Target Filling) = 90% of Container. - Leaving 10% Safety Margin.
         std::cout << "SCANNING: Filling Target = " << target << " cm\n";
         relay.on();
         std::cout << "SCANNING: Pump ON - Filling Process ... \n";
