@@ -34,8 +34,7 @@
 | Component | Qty |
 |---|---|
 | Raspberry Pi 5 | 1 |
-| VL53L1X ToF Laser Sensor module | 1 |
-| VL53L1X Breakout Board (VL53L1X-SATEL) | 1 |
+| VL53L0X V2 ToF Laser Sensor module | 1 |
 | HX711 Load Cell ADC breakout module | 1 |
 | 5kg Load Cell (strain gauge, 4-wire) | 1 |
 | IR Proximity Sensor (digital output) | 1 |
