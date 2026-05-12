@@ -48,10 +48,12 @@ int pin_; // GPIO pin number for the IR sensor
 int handle_; // Handle for GPIO access
 bool active_low_; // Flag to indicate if the sensor is active low
 std::atomic<bool> present_; // Thread-safe flag to indicate if the sensor is present
-std::chrono::steady_clock::time_point last_edge_;
+std::chrono::steady_clock::time_point last_edge_{
+    std::chrono::steady_clock::now() - std::chrono::seconds(10)
+}; // Timestamp of the lastd debouncing.
 
 EventCallback cb_; // Callback function.
-int debounce_ms_ = 500;  // 
+int debounce_ms_ = 50;  // 
 
 
 // Static callback function to handle GPIO alerts. 
